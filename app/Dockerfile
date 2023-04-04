@@ -20,6 +20,8 @@ RUN apt-get update && apt-get install -y \
     wget \
     zlib1g-dev
 
+
+
 # Download, Extract, & Compile Source Code
 WORKDIR /tmp
 RUN wget https://code-aster.org/FICHIERS/aster-full-src-14.6.0-1.noarch.tar.gz
@@ -39,13 +41,14 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install psycopg2 dependencies
-RUN apk update \
-    && apk add postgresql-dev gcc python3-dev musl-dev
+# RUN apt-get postgresql-dev gcc python3-dev musl-dev
+
+RUN apt-get install -y python3-pip
 
 # install dependencies
-RUN pip install --upgrade pip
+RUN pip3 install --upgrade pip
 COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # copy entrypoint.sh
 COPY ./entrypoint.sh .
