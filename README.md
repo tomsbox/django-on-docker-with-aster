@@ -2,6 +2,10 @@
 
 docker exec -it django-on-docker-with-aster-web-1 /opt/aster/bin/as_run /usr/src/app/examples/Qube_for_aster_symm.export
 
+# Run from python
+
+subprocess.call(['docker', 'exec', 'django-on-docker-with-aster-web-1', '/opt/aster/bin/as_run','/usr/src/app/examples/Qube_for_aster_symm.export'], shell=True)
+
 # Dockerizing Django with Postgres, Gunicorn, and Nginx
 
 ## Want to learn how to build this?
