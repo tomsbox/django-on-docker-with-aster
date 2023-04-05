@@ -12,7 +12,7 @@ A args -max_base 100000
 A memjeveux 600
 A tpmax 36000
 F comm Qube_for_aster_symm.comm D  1
-F mail /Qube_for_aster_TET10_10mm_symm.mail D  20
+F mail Qube_for_aster_TET10_10mm_symm.mail D  20
 F mess Qube_for_aster_symm.mess R  6
 F resu Qube_for_aster_symm.resu R  8
 F rmed Qube_for_aster_TET10_10mm_symm.rmed R  80
