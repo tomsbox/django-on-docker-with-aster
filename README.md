@@ -1,3 +1,7 @@
+# Run from outside
+
+docker exec -it django-on-docker-with-aster-web-1 /opt/aster/bin/as_run /usr/src/app/examples/Qube_for_aster_symm.export
+
 # Dockerizing Django with Postgres, Gunicorn, and Nginx
 
 ## Want to learn how to build this?

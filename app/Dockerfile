@@ -44,6 +44,7 @@ ENV PYTHONUNBUFFERED 1
 # RUN apt-get postgresql-dev gcc python3-dev musl-dev
 
 RUN apt-get install -y python3-pip
+RUN apt-get install -y vim
 
 # install dependencies
 RUN pip3 install --upgrade pip
